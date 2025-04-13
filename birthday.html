@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Ulang Tahun! 🎂💐</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            text-align: center;
+            padding-top: 50px;
+        }
+        .ucapan {
+            font-size: 24px;
+            color: #6a0572;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .bunga {
+            font-size: 50px;
+            animation: bungaAnimasi 3s infinite;
+        }
+        .kue {
+            width: 150px;
+            animation: kueAnimasi 4s infinite, putarAnimasi 5s infinite linear;
+        }
+        @keyframes bungaAnimasi {
+            0% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0); }
+        }
+        @keyframes kueAnimasi {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        @keyframes putarAnimasi {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="ucapan">
+        🎉 **Selamat Ulang Tahun, <span id="nama">Nama</span>!** 🎉
+        <br>
+        💖 Semoga hari istimewamu dipenuhi kebahagiaan, cinta, dan tawa. Semoga Tuhan selalu memberkatimu dengan kedamaian dan kesuksesan. 
+        <br><br>
+        🎂 Semoga kue hidupmu selalu manis seperti hari ini, dan bunga-bunga kebahagiaan selalu mekar di setiap langkahmu! 💐
+    </div>
+    <div class="bunga">🌸🌼💐🌺🌻</div>
+    <img src="kue.png" alt="Kue Ulang Tahun" class="kue" />
+    
+    <script>
+        function tampilkanUcapan() {
+            const nama = prompt("Masukkan nama kamu:");
+            if (nama) {
+                document.getElementById("nama").textContent = nama;
+            }
+        }
+        tampilkanUcapan(); // Panggil fungsi saat halaman dimuat
+    </script>
+</body>
+</html>
